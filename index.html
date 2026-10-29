@@ -3,24 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>课堂测试 9 · 新闻标签页</title>
-    <meta http-equiv="refresh" content="0; url=9.html">
+    <title>课堂测试 · 0-9 题</title>
+    <!--
+      作者：lyb
+      建立时间：2026-10-29
+      使用的大模型：DeepSeek-V4.1-Flash
+      功能名称：课堂测试总入口（第 0 到第 9 题，每题的标签切换效果）
+    -->
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            font-family: "宋体", SimSun, serif;
-            font-size: 16px;
-            color: #333;
+            min-height: 100vh;
+            padding: 44px 24px 60px;
+            background: #f5f6f8;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            color: #1f2329;
         }
-        a { color: #c00; }
+
+        .wrap { max-width: 880px; margin: 0 auto; }
+
+        h1 { font-size: 26px; font-weight: 600; }
+
+        .sub { margin-top: 10px; font-size: 14px; line-height: 1.9; color: #646a73; }
+
+        .meta {
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 12.5px;
+            color: #8a9099;
+        }
+
+        .meta span {
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #eef1f6;
+        }
+
+        .cards {
+            margin-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            display: block;
+            padding: 16px 18px;
+            background: #fff;
+            border: 1px solid #e5e6eb;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1f2329;
+            transition: box-shadow .18s, transform .18s, border-color .18s;
+        }
+
+        .card:hover {
+            border-color: #1d6fe0;
+            box-shadow: 0 8px 22px rgba(29, 111, 224, .12);
+            transform: translateY(-2px);
+        }
+
+        .card .no {
+            display: inline-block;
+            margin-bottom: 8px;
+            padding: 2px 9px;
+            border-radius: 6px;
+            background: #e8f3ff;
+            color: #1d6fe0;
+            font-size: 11.5px;
+            font-weight: 600;
+            font-family: Arial, sans-serif;
+        }
+
+        .card b { display: block; font-size: 15px; font-weight: 600; }
+
+        .card span.d {
+            display: block;
+            margin-top: 7px;
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #8a9099;
+        }
+
+        footer { margin-top: 40px; font-size: 12.5px; color: #a0a6ad; }
     </style>
 </head>
 <body>
-    <p>正在打开 <a href="9.html">课堂测试 9 · 新闻标签页</a>…</p>
+<div class="wrap">
+    <h1>课堂测试 · 0-9 题</h1>
+    <p class="sub">十道题都是标签页 / 排行榜类的组件，每页都可以点击标签切换内容。</p>
+    <div class="meta">
+        <span>lyb</span>
+        <span>计算机24004</span>
+        <span>2026-10-29</span>
+    </div>
+
+    <div class="cards">
+        <a class="card" href="0.html"><span class="no">0</span><b>排行榜</b><span class="d">新闻 / 证券 / 理财 / 博客 四标签，前十名编号列表</span></a>
+        <a class="card" href="1.html"><span class="no">1</span><b>点击排行</b><span class="d">点击排行 / 评论排行，序号加次数的两列信息</span></a>
+        <a class="card" href="2.html"><span class="no">2</span><b>24小时点击排行</b><span class="d">实时点击 / 24小时排行，前三名带边框序号</span></a>
+        <a class="card" href="3.html"><span class="no">3</span><b>新车上市表</b><span class="d">最新上市 / 即将上市，表格含时间、车型、售价</span></a>
+        <a class="card" href="4.html"><span class="no">4</span><b>文学社科书城</b><span class="d">三栏布局：主编推荐 / 书墙（三分类）/ 订购榜</span></a>
+        <a class="card" href="5.html"><span class="no">5</span><b>影视排行</b><span class="d">每日 / 每周 / 每月 / 全部，两列前十名</span></a>
+        <a class="card" href="6.html"><span class="no">6</span><b>股票涨跌榜</b><span class="d">沪涨 / 沪跌 / 深涨 / 深跌，红涨绿跌四列表格</span></a>
+        <a class="card" href="7.html"><span class="no">7</span><b>SUV 频道导购</b><span class="d">按价格区间切换，红色主标题加带日期的新闻列表</span></a>
+        <a class="card" href="8.html"><span class="no">8</span><b>音乐手机频道</b><span class="d">行情 / 导购 / 新品 / 评测，蓝色标题列表</span></a>
+        <a class="card" href="9.html"><span class="no">9</span><b>新闻标签页</b><span class="d">最新投诉 / 官方回应 / 追踪调查，红框标签</span></a>
+    </div>
+
+    <footer>lyb · 计算机24004 · 2026-10-29</footer>
+</div>
 </body>
 </html>
